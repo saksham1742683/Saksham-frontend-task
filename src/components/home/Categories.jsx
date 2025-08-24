@@ -367,8 +367,6 @@ const categories = [
   },
 ];
 
-// --- SVG Icons (to remove dependency on react-icons) ---
-
 const IoChevronBack = (props) => (
   <svg
     stroke="currentColor"
@@ -752,25 +750,24 @@ const allProducts = {
   ],
 };
 
-// --- Main Component ---
 
 const ShopCategories = () => {
-  // State to track the active category ID. Default to 2 ('Technology').
+
   const [activeCategoryId, setActiveCategoryId] = useState(2);
-  // State to hold the products that should be displayed.
+
   const [displayedProducts, setDisplayedProducts] = useState([]);
 
-  // This effect runs when the component mounts and whenever activeCategoryId changes.
+
   useEffect(() => {
-    // Find the label of the currently active category.
+
     const activeCategory = categories.find(
       (cat) => cat.id === activeCategoryId
     );
     if (activeCategory) {
-      // Set the displayed products from our allProducts object based on the active category's label.
+ 
       setDisplayedProducts(allProducts[activeCategory.label] || []);
     }
-  }, [activeCategoryId]); // Dependency array: this effect re-runs when activeCategoryId changes.
+  }, [activeCategoryId]); 
 
   return (
     <div className="bg-white text-black p-4 sm:p-10 font-sans">

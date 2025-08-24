@@ -36,19 +36,10 @@ const ChevronRightIcon = () => (
 
 const HeroSection = () => {
   return (
-    // Wrapper to center the content on the page
-    // On mobile, padding is reduced (p-4), and on medium screens and up, it increases (md:p-6)
     <div className="min-h-screen flex items-center justify-center p-4 md:p-6 font-sans">
-      {/* Main container for the grid.
-        - On mobile (default): It's a column layout (flex-col) with a larger gap. Height is automatic.
-        - On large screens (lg): It switches to a row layout (lg:flex-row) with the original height and gap.
-      */}
-      <div className="max-w-[90rem] w-full mx-auto flex flex-col lg:flex-row gap-6 h-auto lg:h-[85vh]">
-        
-        {/* === LEFT COLUMN === */}
-        {/* - On mobile (default): Full width (w-full) and a minimum height to ensure it's not too small.
-          - On large screens (lg): Switches to the original fractional width (lg:w-2/12).
-        */}
+  
+      <div className="max-w-[90rem] w-full mx-auto flex flex-col-reverse lg:flex-row gap-6 h-auto lg:h-[85vh]">
+ 
         <div 
           className="rounded-lg w-full lg:w-2/12 p-8 flex flex-col justify-between text-center bg-cover bg-center relative min-h-[300px]"
           style={{
@@ -67,10 +58,6 @@ const HeroSection = () => {
           </button>
         </div>
 
-        {/* === MIDDLE COLUMN === */}
-        {/* - On mobile (default): Full width (w-full).
-          - On large screens (lg): Switches to the original fractional width (lg:w-7/12).
-        */}
         <div className="w-full lg:w-7/12 flex flex-col gap-6">
           {/* Top Banner Card */}
           <div 
@@ -108,10 +95,7 @@ const HeroSection = () => {
               <div className="w-2 h-2 rounded-full bg-white/50"></div>
             </div>
           </div>
-          {/* Bottom Row of Cards */}
-          {/* - On mobile (default): Stacks vertically (flex-col).
-            - On medium screens (md): Switches to a row layout (md:flex-row).
-          */}
+    
           <div className="h-auto lg:h-[35%] flex flex-col md:flex-row gap-6">
             {/* Each card is full width on mobile and 1/3 width on medium screens up */}
             <div 
@@ -153,10 +137,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* === RIGHT COLUMN === */}
-        {/* - On mobile (default): Full width (w-full).
-          - On large screens (lg): Switches to the original fractional width (lg:w-3/12).
-        */}
+  
         <div className="w-full lg:w-3/12 flex flex-col gap-6">
           <div 
             className="rounded-lg p-6 flex flex-col justify-center flex-grow-[2] bg-cover bg-center relative min-h-[150px]"
@@ -183,9 +164,7 @@ const HeroSection = () => {
               <h3 className="text-xl font-bold">Supplements</h3>
             </div>
           </div>
-          {/* - On mobile (default): Stacks vertically (flex-col).
-            - On small screens (sm): Switches to a row layout (sm:flex-row).
-          */}
+     
           <div className="h-auto lg:h-[35%] flex flex-col sm:flex-row gap-6">
             {/* Each card is full width on mobile and 1/2 width on small screens up */}
             <div 

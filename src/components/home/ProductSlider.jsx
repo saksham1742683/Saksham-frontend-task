@@ -58,7 +58,7 @@ const defaultProducts = [
 // --- Main Component ---
 const ProductSlider = ({ title = "Watch", products = defaultProducts }) => {
   return (
-    <div className="bg-gray-100 flex justify-center py-10">
+    <div className="flex justify-center py-10">
       <div className="bg-white text-black font-sans w-full max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 rounded-lg">
         {/* Header Section */}
         <header className="flex flex-col md:flex-row justify-between md:items-center gap-6 mb-8">
@@ -66,7 +66,7 @@ const ProductSlider = ({ title = "Watch", products = defaultProducts }) => {
           <h2 className="text-2xl sm:text-3xl font-bold text-left">{title}</h2>
           
           {/* Responsive and wrapping navigation */}
-          <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-semibold text-gray-500">
+          <nav className="flex  items-center md:gap-x-6 gap-y-2 gap-x-2 text-sm font-semibold text-gray-500">
             <a
               href="#"
               className="text-green-500 relative after:content-[''] after:absolute after:left-0 after:bottom-[-4px] after:w-full after:h-[2px] after:bg-green-500"

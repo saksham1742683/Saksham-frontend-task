@@ -1,8 +1,6 @@
-// src/components/layout/MainHeader.js
 import React from "react";
 import { categories } from "../../data/mockData";
 import { useCart } from "../../App";
-// --- Icons for Mobile View ---
 const MenuIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"

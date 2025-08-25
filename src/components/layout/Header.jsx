@@ -1,8 +1,7 @@
-// src/components/layout/Header.js
 import React from "react";
 import TopBar from "./TopBar";
 import MainHeader from "./MainHeader";
-import BottomNav from "./BottomNav"; // Renamed for clarity
+import BottomNav from "./BottomNav"; 
 
 const Header = () => {
   return (

@@ -1,6 +1,5 @@
 import React from "react";
 
-// This file centralizes all category SVG icon components for clean code.
 
 export const RealEstateIcon = () => (
   <svg
@@ -288,7 +287,7 @@ export const FoodIcon = () => (
 
 );
 
-// Create a lookup object to easily access icons by their label name
+
 export const iconMap = {
   "Real Estate": <RealEstateIcon />,
   Technology: <TechnologyIcon />,

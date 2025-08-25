@@ -1,6 +1,5 @@
 import React from "react";
 
-// --- SVG Icons for Features Section ---
 const FreeShippingIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"

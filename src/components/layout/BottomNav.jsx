@@ -1,4 +1,3 @@
-// src/components/layout/BottomNav.js
 import React from "react";
 import { mainNavLinks } from "../../data/mockData";
 

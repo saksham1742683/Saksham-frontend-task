@@ -1,8 +1,7 @@
-// src/components/layout/TopBar.js
+
 import React from "react";
 import { topNavLinks } from "../../data/mockData";
-// You would create this Icon component in src/components/common/Icon.js
-// For now, we'll use inline SVGs.
+
 
 const InstagramIcon = () => (
   <svg

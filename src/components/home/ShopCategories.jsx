@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { productSections } from "../../data/mockData";// Import the unified data
+import { productSections } from "../../data/mockData";
 import { iconMap } from "../CategoryIcons";
 
-// Your IoChevronBack and IoChevronForward components can remain here or be moved
 const IoChevronBack = (props) => (
   <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" {...props}><path fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="48" d="M328 112L184 256l144 144"></path></svg>
 );
@@ -12,7 +11,6 @@ const IoChevronForward = (props) => (
 
 
 const ShopCategories = () => {
-  // Initialize state with the ID of the 'Technology' section
   const [activeCategoryId, setActiveCategoryId] = useState(2);
   const [displayedProducts, setDisplayedProducts] = useState([]);
 
@@ -65,7 +63,6 @@ const ShopCategories = () => {
           ))}
         </div>
 
-        {/* This product grid now works perfectly with the unified data */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mt-10">
           {displayedProducts.map((product) => (
             <div key={product.id} className="flex flex-col">

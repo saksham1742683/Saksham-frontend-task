@@ -1,11 +1,9 @@
 import React from "react";
 
-// --- SVG Icons for Contact Section ---
-// Reusable icon components for cleaner code
 const LocationIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5 text-gray-400 flex-shrink-0" // Prevents icon from shrinking
+    className="h-5 w-5 text-gray-400 flex-shrink-0" 
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -58,9 +56,7 @@ const MailIcon = () => (
   </svg>
 );
 
-// --- Footer Component ---
 const Footer = () => {
-  // Helper component for footer links for reusability
   const FooterLink = ({ href = "#", children, className = "text-gray-400" }) => (
     <a
       href={href}
@@ -73,9 +69,7 @@ const Footer = () => {
   return (
     <footer className="bg-black text-white font-sans">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        {/* Top section with links: Stacks on mobile, 2 cols on small screens, 4 on large */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Contact Column */}
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Contact</h3>
             <p className="text-sm text-gray-400">ftribe Co., Ltd</p>
@@ -97,7 +91,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Cooperation Column */}
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Cooperation - Association</h3>
             <div className="flex flex-col space-y-3">
@@ -108,7 +101,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Customer Support Column */}
           <div className="space-y-4">
             <h3 className="text-lg font-bold">Customer Support</h3>
             <div className="flex flex-col space-y-3">
@@ -123,9 +115,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Additional Customer Support Info */}
           <div className="space-y-4">
-            {/* Invisible h3 preserves vertical alignment with other columns */}
             <h3 className="text-lg font-bold invisible">More Support</h3>
             <div className="flex flex-col space-y-3">
               <FooterLink>Installment Purchase Guide</FooterLink>
@@ -143,14 +133,11 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom section with copyright */}
       <div className="border-t border-gray-800 bg-white">
-        {/* Stacks vertically on mobile, horizontally from md screen size up */}
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
           <p className="text-black text-center md:text-left order-2 md:order-1">
             Copyright 2020 @ ftribe
           </p>
-          {/* Links wrap and center on mobile, stay in a row on larger screens */}
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 order-1 md:order-2">
             <FooterLink href="#" className="text-black">Introduce</FooterLink>
             <span className="text-gray-400 hidden sm:inline">.</span>
@@ -163,7 +150,6 @@ const Footer = () => {
             <FooterLink href="#" className="text-black">Frequently asked Questions</FooterLink>
           </div>
           <div className="flex items-center gap-2 order-3">
-            {/* Placeholder for payment icons */}
             <div className="w-10 h-6 bg-gray-200 rounded"></div>
             <div className="w-10 h-6 bg-gray-200 rounded"></div>
             <div className="w-10 h-6 bg-gray-200 rounded"></div>

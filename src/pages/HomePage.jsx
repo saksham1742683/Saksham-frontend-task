@@ -7,10 +7,8 @@ import TechnologySection from "../components/home/TechnologySection";
 import FeaturesSection from "../components/home/FeaturesSection";
 import ProductSlider from "../components/home/ProductSlider";
 
-// Updated import to reflect the new data structure
 import { productSections } from "../data/mockData";
-// --- 1. Create Cart Context ---
-// This will hold the cart's state and functions to modify it.
+
 
 const HomePage = () => {
   return (
@@ -20,15 +18,13 @@ const HomePage = () => {
       <ProductShowcase />
       <PromoSection />
       <WalletSaleBanner />
-      {/* <TechnologySection /> */}
-
-      {/* Dynamic Map for Product Sections */}
+      
       {productSections.map((section, index) => (
         <ProductSlider
           key={index}
           title={section.title}
           products={section.products}
-          categories={section.categories} // Pass the categories for filtering
+          categories={section.categories} 
         />
       ))}
 

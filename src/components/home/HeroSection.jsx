@@ -36,7 +36,7 @@ const ChevronRightIcon = () => (
 
 const HeroSection = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 md:p-6 font-sans">
+    <div className="min-h-screen flex items-center justify-center p-4 md:p-6 font-sans md:mt-36 mt-12">
   
       <div className="max-w-[90rem] w-full mx-auto flex flex-col-reverse lg:flex-row gap-6 h-auto lg:h-[85vh]">
  

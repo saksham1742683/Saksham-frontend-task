@@ -1,7 +1,7 @@
 // src/components/layout/MainHeader.js
 import React from "react";
 import { categories } from "../../data/mockData";
-
+import { useCart } from "../../App";
 // --- Icons for Mobile View ---
 const MenuIcon = () => (
   <svg
@@ -71,6 +71,9 @@ const CartIconMobile = () => (
 );
 
 const MainHeader = () => {
+      const { cartItems,  wishListItems } = useCart();
+    const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+        const Items = wishListItems.reduce((sum, item) => sum + item.quantity, 0);
   return (
     <div className="max-w-5xl mx-auto py-2 md:py-4 px-4">
       {/* Mobile Header */}
@@ -82,13 +85,16 @@ const MainHeader = () => {
           <a href="#" className="p-2">
             <SearchIconMobile />
           </a>
-          <a href="#" className="p-2">
+          <a href="#" className="p-2 relative">
             <HeartIconMobile />
+              <span className="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+              {Items}
+            </span>
           </a>
           <a href="#" className="relative p-2">
             <CartIconMobile />
             <span className="absolute top-0 right-0 bg-orange-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-              3
+              {totalItems}
             </span>
           </a>
         </div>
@@ -115,7 +121,7 @@ const MainHeader = () => {
         </button>
 
         <div className="flex items-center w-full justify-around">
-          <a href="#" className="hover:text-gray-300 text-white">
+          <a href="#" className="hover:text-gray-300 text-white relative">
             <svg
               width="24"
               height="24"
@@ -137,6 +143,10 @@ const MainHeader = () => {
                 </clipPath>
               </defs>
             </svg>
+
+               <span className="absolute -top-2 -right-3 bg-orange-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+              {Items}
+            </span>
           </a>
           <a href="#" className="relative hover:text-gray-300 text-white">
             <svg
@@ -165,7 +175,7 @@ const MainHeader = () => {
             </svg>
 
             <span className="absolute -top-2 -right-3 bg-orange-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-              3
+              {totalItems}
             </span>
           </a>
         </div>

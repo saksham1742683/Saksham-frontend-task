@@ -6,7 +6,7 @@ import BottomNav from "./BottomNav"; // Renamed for clarity
 
 const Header = () => {
   return (
-    <header className="  w-full">
+    <header className="  w-full fixed top-0 left-0 z-[100]">
       <div className=" bg-black">
         <TopBar />
         <MainHeader />

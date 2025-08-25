@@ -1,8 +1,6 @@
 // src/data/mockData.js
 
-// Using placeholder images from placehold.co
-// In a real project, you would have your actual image URLs here.
-
+// --- Data for other components (preserved) ---
 export const categories = [
   { id: 1, name: "All Categories" },
   { id: 2, name: "Electronics" },
@@ -18,112 +16,12 @@ export const topNavLinks = [
   { id: 4, title: "Contact", url: "#" },
   { id: 5, title: "Frequently asked questions", url: "#" },
 ];
-
+// ... (other exports like mainNavLinks, products, heroCarouselSlides are also preserved)
 export const mainNavLinks = [
   { id: 1, title: "Home", url: "/" },
   { id: 2, title: "New Product", url: "/products" },
   { id: 3, title: "Promotion", url: "/promotions", isHot: true },
 ];
-
-export const products = [
-  {
-    id: 1,
-    name: "Wireless Bluetooth Headphones",
-    price: 99.0,
-    originalPrice: 120.0,
-    rating: 4.5,
-    reviewCount: 88,
-    image: "https://placehold.co/300x300/e2e8f0/4a5568?text=Headphones",
-    category: "Electronics",
-    isNew: true,
-    discount: 20,
-  },
-  {
-    id: 2,
-    name: "Modern Leather Sofa",
-    price: 699.0,
-    originalPrice: 850.0,
-    rating: 4.8,
-    reviewCount: 120,
-    image: "https://placehold.co/300x300/e2e8f0/4a5568?text=Sofa",
-    category: "Home & Lifestyle",
-    isNew: false,
-    discount: 18,
-  },
-  {
-    id: 3,
-    name: "Classic Men's Watch",
-    price: 250.0,
-    originalPrice: 300.0,
-    rating: 4.7,
-    reviewCount: 95,
-    image: "https://placehold.co/300x300/e2e8f0/4a5568?text=Watch",
-    category: "Men Fashion",
-    isNew: false,
-    discount: 0,
-  },
-  {
-    id: 4,
-    name: "Elegant Women's Dress",
-    price: 150.0,
-    originalPrice: 180.0,
-    rating: 4.6,
-    reviewCount: 75,
-    image: "https://placehold.co/300x300/e2e8f0/4a5568?text=Dress",
-    category: "Women Fashion",
-    isNew: true,
-    discount: 15,
-  },
-  {
-    id: 5,
-    name: "Smart Home Assistant",
-    price: 49.99,
-    originalPrice: 60.0,
-    rating: 4.9,
-    reviewCount: 250,
-    image: "https://placehold.co/300x300/e2e8f0/4a5568?text=Smart+Home",
-    category: "Electronics",
-    isNew: false,
-    discount: 10,
-  },
-  {
-    id: 6,
-    name: "Cozy Throw Blanket",
-    price: 39.99,
-    originalPrice: null,
-    rating: 4.8,
-    reviewCount: 150,
-    image: "https://placehold.co/300x300/e2e8f0/4a5568?text=Blanket",
-    category: "Home & Lifestyle",
-    isNew: true,
-    discount: 0,
-  },
-  {
-    id: 7,
-    name: "Men's Running Shoes",
-    price: 85.0,
-    originalPrice: 100.0,
-    rating: 4.7,
-    reviewCount: 180,
-    image: "https://placehold.co/300x300/e2e8f0/4a5568?text=Shoes",
-    category: "Men Fashion",
-    isNew: false,
-    discount: 15,
-  },
-  {
-    id: 8,
-    name: "Stylish Women's Handbag",
-    price: 120.0,
-    originalPrice: 150.0,
-    rating: 4.9,
-    reviewCount: 200,
-    image: "https://placehold.co/300x300/e2e8f0/4a5568?text=Handbag",
-    category: "Women Fashion",
-    isNew: true,
-    discount: 20,
-  },
-];
-
 export const heroCarouselSlides = [
   {
     id: 1,
@@ -145,250 +43,760 @@ export const heroCarouselSlides = [
   },
 ];
 
-// src/data/products.js
-// Note: Image URLs are sourced from Unsplash. You might want to download them
-// and host them locally for better performance and stability.
-
-export const categoriesData = [
+// --- NEW UNIFIED DATA SOURCE FOR ALL PRODUCT COMPONENTS ---
+export const productSections = [
   {
-    title: "Watch",
-    products: [
-      {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500&auto=format&fit=crop",
-        badge: { text: "-49%", className: "bg-orange-500 text-white" },
-        title: "Apple Watch Series 5",
-        price: "$514.51",
-        oldPrice: "$253.24",
-        author: "by Co., Ltd Minie Li",
-      },
-      {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=500&auto=format&fit=crop",
-        badge: { text: "-12%", className: "bg-orange-500 text-white" },
-        title: "Hand Watch Rossini – 1328WQ1A",
-        price: "$146.71",
-        oldPrice: "$94.32",
-        author: "by Co., Ltd SMART MARKETING",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop",
-        badge: { text: "New", className: "bg-green-500 text-white" },
-        title: "Classic Leather Strap Watch",
-        price: "$250.00",
-        author: "by Timeless Pieces Inc.",
-      },
-      {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1590922492137-32946a86c297?w=500&auto=format&fit=crop",
-        badge: { text: "Hot", className: "bg-red-500 text-white" },
-        title: "Deep Sea Diver's Chronograph",
-        price: "$780.90",
-        author: "by Oceanic Instruments",
-      },
-      {
-        id: 5,
-        image:
-          "https://images.unsplash.com/photo-1508057198894-247b232521e4?w=500&auto=format&fit=crop",
-        badge: { text: "-20%", className: "bg-orange-500 text-white" },
-        title: "Minimalist Digital Sports Watch",
-        price: "$89.99",
-        oldPrice: "$112.50",
-        author: "by Modern Time",
-      },
-      {
-        id: 6,
-        image:
-          "https://images.unsplash.com/photo-1614703418052-d5b893d6cf28?w=500&auto=format&fit=crop",
-        badge: { text: "Luxury", className: "bg-purple-500 text-white" },
-        title: "Gold & Diamond Evening Watch",
-        price: "$1250.00",
-        author: "by Elegance United",
-      },
-    ],
-  },
-  {
+    id: 1,
     title: "Real Estate",
+    categories: ["All", "House", "Land", "House for rent", "Project"],
     products: [
       {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=500&auto=format&fit=crop",
-        badge: { text: "Hot", className: "bg-red-500 text-white" },
-        title: "Luxury Villa in Bali",
-        price: "$2,250,000",
-        author: "by Smart Developers",
+        id: 101,
+        badge: {
+          text: "Hot",
+          className: "bg-red-500 text-white",
+        },
+        brand: "Modern Downtown Loft",
+        model: "2 Bed, 2 Bath",
+        price: "$2,500/mo",
+        author: "by Urban Dwellings",
+        imageUrl:
+          "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=400&fit=crop&crop=center",
+        category: "House for rent",
       },
       {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500&auto=format&fit=crop",
-        badge: { text: "New Listing", className: "bg-blue-500 text-white" },
-        title: "Modern Downtown Loft",
-        price: "$850,000",
-        author: "by Urban Properties",
+        id: 102,
+        brand: "Suburban Family Home",
+        model: "4 Bed, 3 Bath, Large Yard",
+        price: "$750,000",
+        author: "by Homestead Realty",
+        imageUrl:
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400&h=400&fit=crop&crop=center",
+        category: "House",
       },
       {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=500&auto=format&fit=crop",
-        badge: { text: "Reduced", className: "bg-yellow-500 text-black" },
-        title: "Cozy Suburban Family Home",
-        price: "$475,000",
-        oldPrice: "$510,000",
-        author: "by Community Realtors",
+        id: 103,
+        badge: {
+          text: "New Listing",
+          className: "bg-green-500 text-white",
+        },
+        brand: "Luxury Beachfront Villa",
+        model: "5 Bed, 6 Bath, Pool",
+        price: "$3,200,000",
+        author: "by Seaside Properties",
+        imageUrl:
+          "https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?w=400&h=400&fit=crop&crop=center",
+        category: "House",
       },
       {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=500&auto=format&fit=crop",
-        badge: { text: "Open House", className: "bg-green-500 text-white" },
-        title: "Spacious Countryside Estate",
-        price: "$1,500,000",
+        id: 104,
+        brand: "City Penthouse",
+        model: "3 Bed, 3 Bath, Terrace",
+        price: "$4,200/mo",
+        author: "by Elite Properties",
+        imageUrl:
+          "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=400&fit=crop&crop=center",
+        category: "House for rent",
+      },
+      {
+        id: 105,
+        badge: {
+          text: "Price Drop",
+          className: "bg-orange-500 text-white",
+        },
+        brand: "Cozy Studio Apartment",
+        model: "1 Bed, 1 Bath, Downtown",
+        price: "$1,800/mo",
+        oldPrice: "$2,100/mo",
+        author: "by City Living",
+        imageUrl:
+          "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=400&fit=crop&crop=center",
+        category: "Project",
+      },
+      {
+        id: 106,
+        badge: {
+          text: "For Sale",
+          className: "bg-blue-500 text-white",
+        },
+        brand: "Scenic Mountain Acreage",
+        model: "10 Acres, Zoned Residential",
+        price: "$250,000",
         author: "by Greenfield Realty",
+        imageUrl:
+          "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=400&fit=crop&crop=center",
+        category: "Land",
       },
       {
-        id: 5,
-        image:
-          "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=500&auto=format&fit=crop",
-        badge: { text: "Hot", className: "bg-red-500 text-white" },
-        title: "Sunny Beachfront Condo",
-        price: "$1,100,000",
-        author: "by Seaside Homes",
+        id: 107,
+        brand: "Historic Victorian Home",
+        model: "6 Bed, 4 Bath, Original Woodwork",
+        price: "$980,000",
+        author: "by Heritage Properties",
+        imageUrl:
+          "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&h=400&fit=crop&crop=center",
+        category: "House",
       },
       {
-        id: 6,
-        image:
-          "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=500&auto=format&fit=crop",
-        badge: { text: "Just Sold", className: "bg-gray-500 text-white" },
-        title: "Chic Urban Apartment",
-        price: "$620,000",
-        author: "by Metro Living",
+        id: 108,
+        badge: {
+          text: "Furnished",
+          className: "bg-purple-500 text-white",
+        },
+        brand: "Lakeside Cabin Retreat",
+        model: "2 Bed, 1 Bath, Dock Access",
+        price: "$1,500/mo",
+        author: "by Lakeside Rentals",
+        imageUrl:
+          "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=400&h=400&fit=crop&crop=center",
+        category: "House for rent",
+      },
+      {
+        id: 109,
+        brand: "Eco Tower Residences",
+        model: "LEED Certified, Smart Homes",
+        price: "Starting at $650,000",
+        author: "by Future Living Inc.",
+        imageUrl:
+          "https://images.unsplash.com/photo-1515263487990-61b07816b525?w=400&h=400&fit=crop&crop=center",
+        category: "Project",
+      },
+      {
+        id: 110,
+        badge: {
+          text: "Auction",
+          className: "bg-red-700 text-white",
+        },
+        brand: "Commercial Development Plot",
+        model: "5 Acres, Prime Location",
+        price: "Contact for Price",
+        author: "by Apex Commercial",
+        imageUrl:
+          "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400&h=400&fit=crop&crop=center",
+        category: "Land",
       },
     ],
   },
   {
-    title: "Cosmetics",
+    id: 2,
+    title: "Technology",
+    categories: [
+      "All",
+      "Smart Watch",
+      "Laptop",
+      "Tablet",
+      "Desktop",
+      "Accessories",
+    ],
     products: [
       {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&auto=format&fit=crop",
+        id: 201,
         badge: { text: "New", className: "bg-green-500 text-white" },
-        title: "Organic Face Cream",
-        price: "$25.50",
-        author: "by Beauty World",
+        brand: "Apple MacBook Pro",
+        model: "M3 Chip, 16GB RAM",
+        price: "$2,013.54",
+        author: "by Apple Official",
+        imageUrl:
+          "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=400&h=400&fit=crop",
+        category: "Laptop",
       },
       {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500&auto=format&fit=crop",
-        badge: { text: "Best Seller", className: "bg-red-500 text-white" },
-        title: "Matte Finish Liquid Lipstick",
-        price: "$18.00",
-        author: "by Velvet Kiss",
+        id: 202,
+        badge: { text: "Favorite", className: "bg-yellow-500 text-white" },
+        brand: "Apple Watch Series 9",
+        model: "GPS + Cellular",
+        price: "$517.79",
+        author: "by 247 Store",
+        imageUrl:
+          "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=400&h=400&fit=crop",
+        category: "Smart Watch",
       },
       {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1631739133293-83c385b6141a?w=500&auto=format&fit=crop",
-        badge: { text: "Vegan", className: "bg-green-600 text-white" },
-        title: "Hydrating Hyaluronic Acid Serum",
-        price: "$32.75",
-        author: "by Pure Glow",
+        id: 203,
+        badge: { text: "-15%", className: "bg-red-500 text-white" },
+        brand: "Dell XPS 15",
+        model: "OLED, 32GB RAM",
+        price: "$1,899",
+        oldPrice: "$2,234.12",
+        author: "by Dell Official",
+        imageUrl:
+          "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=400&fit=crop",
+        category: "Laptop",
       },
       {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1607642739333-5a7d643f8369?w=500&auto=format&fit=crop",
-        badge: { text: "-15%", className: "bg-orange-500 text-white" },
-        title: "Full Coverage Foundation",
-        price: "$28.90",
-        oldPrice: "$34.00",
-        author: "by Flawless Co.",
+        id: 204,
+        brand: "Sony WH-1000XM5",
+        model: "Noise Cancelling",
+        price: "$399.99",
+        author: "by Sony Official",
+        imageUrl:
+          "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&h=400&fit=crop",
+        category: "Accessories",
       },
       {
-        id: 5,
-        image:
-          "https://images.unsplash.com/photo-1541643600914-78b084683601?w=500&auto=format&fit=crop",
-        badge: { text: "New Scent", className: "bg-pink-400 text-white" },
-        title: "Eau De Parfum - Floral Notes",
-        price: "$85.00",
-        author: "by Aroma & Eve",
+        id: 205,
+        badge: { text: "Gaming", className: "bg-purple-500 text-white" },
+        brand: "NVIDIA RTX 4080",
+        model: "Super Graphics Card",
+        price: "$1,199.99",
+        author: "by NVIDIA",
+        imageUrl:
+          "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=400&fit=crop",
+        category: "Desktop",
       },
       {
-        id: 6,
-        image:
-          "https://images.unsplash.com/photo-1599900428382-d6486b25febb?w=500&auto=format&fit=crop",
-        badge: { text: "Waterproof", className: "bg-blue-500 text-white" },
-        title: "Volumizing & Lengthening Mascara",
-        price: "$21.50",
-        author: "by Lash Envy",
+        id: 206,
+        brand: "Samsung Galaxy Tab S9",
+        model: "11-inch, 256GB",
+        price: "$799.00",
+        author: "by Samsung",
+        imageUrl:
+          "https://images.unsplash.com/photo-1612442433549-3a2b7537b962?w=400&h=400&fit=crop",
+        category: "Tablet",
+      },
+      {
+        id: 207,
+        badge: { text: "Top Rated", className: "bg-blue-500 text-white" },
+        brand: "Logitech MX Master 3S",
+        model: "Wireless Performance Mouse",
+        price: "$99.99",
+        author: "by Logitech",
+        imageUrl:
+          "https://images.unsplash.com/photo-1615664109556-43c1b7df1534?w=400&h=400&fit=crop",
+        category: "Accessories",
+      },
+      {
+        id: 208,
+        brand: "Google Pixel Watch 2",
+        model: "GPS, Wear OS",
+        price: "$349.99",
+        author: "by Google Store",
+        imageUrl:
+          "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400&h=400&fit=crop",
+        category: "Smart Watch",
+      },
+      {
+        id: 209,
+        badge: { text: "Value", className: "bg-teal-500 text-white" },
+        brand: "Lenovo IdeaPad Slim 3",
+        model: "Ryzen 5, 8GB RAM",
+        price: "$449.00",
+        author: "by Lenovo",
+        imageUrl:
+          "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=400&h=400&fit=crop",
+        category: "Laptop",
+      },
+      {
+        id: 210,
+        brand: "Apple iMac 24-inch",
+        model: "M3 Chip, 8-core GPU",
+        price: "$1,299.00",
+        author: "by Apple Official",
+        imageUrl:
+          "https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?w=400&h=400&fit=crop",
+        category: "Desktop",
       },
     ],
   },
   {
-    title: "Luxury Foods",
+    id: 3,
+    title: "Watch",
+    categories: ["All", "Men's watch", "Women's Watches", "Smart watch"],
     products: [
       {
-        id: 1,
-        image:
-          "https://images.unsplash.com/photo-1606734335391-9c6a10503b4a?w=500&auto=format&fit=crop",
-        badge: { text: "-10%", className: "bg-orange-500 text-white" },
-        title: "Premium Belgian Chocolate",
-        price: "$15.00",
-        oldPrice: "$18.00",
-        author: "by Sweet Life",
+        id: 301,
+        badge: { text: "Sold Out", className: "bg-gray-400 text-white" },
+        brand: "Rolex Submariner",
+        model: "Stainless Steel",
+        price: "$8,550.00",
+        author: "by Rolex Official",
+        imageUrl:
+          "https://images.unsplash.com/photo-1523170335258-f5c6c6bd44bd?w=400&h=400&fit=crop",
+        category: "Men's watch",
       },
       {
-        id: 2,
-        image:
-          "https://images.unsplash.com/photo-1594041724339-3245b5514bc2?w=500&auto=format&fit=crop",
-        badge: { text: "Organic", className: "bg-green-600 text-white" },
-        title: "Italian White Truffle Oil",
-        price: "$45.00",
-        author: "by Gourmet Pantry",
+        id: 302,
+        brand: "Seiko Prospex",
+        model: "Automatic Diver's Watch",
+        price: "$450.00",
+        author: "by Timepiece Emporium",
+        imageUrl:
+          "https://images.unsplash.com/photo-1547996160-81dfa63595aa?w=400&h=400&fit=crop",
+        category: "Men's watch",
       },
       {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1618164436245-4b7b3238d3f3?w=500&auto=format&fit=crop",
-        badge: { text: "Imported", className: "bg-blue-500 text-white" },
-        title: "Aged Parmesan Cheese Wheel",
+        id: 303,
+        badge: {
+          text: "Limited",
+          className: "bg-gold-500 text-white bg-yellow-600",
+        },
+        brand: "Omega Speedmaster",
+        model: "Moonwatch Professional",
+        price: "$6,350.00",
+        author: "by Omega",
+        imageUrl:
+          "https://images.unsplash.com/photo-1609081219090-a6d81d3085bf?w=400&h=400&fit=crop",
+        category: "Men's watch",
+      },
+      {
+        id: 304,
+        brand: "Tag Heuer Formula 1",
+        model: "Chronograph",
+        price: "$1,200.00",
+        author: "by Tag Heuer",
+        imageUrl:
+          "https://images.unsplash.com/photo-1594534475808-b18fc33b045e?w=400&h=400&fit=crop",
+        category: "Men's watch",
+      },
+      {
+        id: 305,
+        badge: { text: "Vintage", className: "bg-amber-600 text-white" },
+        brand: "Casio G-Shock",
+        model: "Digital Sports Watch",
+        price: "$89.99",
+        author: "by Casio",
+        imageUrl:
+          "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=400&h=400&fit=crop",
+        category: "Smart watch",
+      },
+      {
+        id: 306,
+        brand: "Michael Kors Parker",
+        model: "Rose Gold-Tone",
+        price: "$275.00",
+        author: "by Michael Kors",
+        imageUrl:
+          "https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?w=400&h=400&fit=crop",
+        category: "Women's Watches",
+      },
+      {
+        id: 307,
+        badge: { text: "Fitness", className: "bg-lime-500 text-white" },
+        brand: "Fitbit Charge 6",
+        model: "Health & Fitness Tracker",
+        price: "$159.95",
+        author: "by Fitbit",
+        imageUrl:
+          "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+        category: "Smart watch",
+      },
+      {
+        id: 308,
+        brand: "Tissot Le Locle",
+        model: "Automatic, Leather Strap",
+        price: "$575.00",
+        author: "by Tissot",
+        imageUrl:
+          "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=400&h=400&fit=crop",
+        category: "Men's watch",
+      },
+      {
+        id: 309,
+        badge: { text: "Elegant", className: "bg-fuchsia-500 text-white" },
+        brand: "Cartier Ballon Bleu",
+        model: "33mm, Stainless Steel",
+        price: "$6,000.00",
+        author: "by Cartier",
+        imageUrl:
+          "https://images.unsplash.com/photo-1620625515032-6ed2a143c1e2?w=400&h=400&fit=crop",
+        category: "Women's Watches",
+      },
+      {
+        id: 310,
+        brand: "Citizen Eco-Drive",
+        model: "Promaster Nighthawk",
+        price: "$297.00",
+        author: "by Citizen",
+        imageUrl:
+          "https://images.unsplash.com/photo-1590922492137-32946a86c297?w=400&h=400&fit=crop",
+        category: "Men's watch",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Glasses",
+    categories: ["All", "Sunglasses", "Eyeglasses"],
+    products: [
+      {
+        id: 401,
+        brand: "Ray-Ban Aviator",
+        model: "Classic Gold Frame",
+        price: "$154.00",
+        author: "by Sunglass Hut",
+        imageUrl:
+          "https://images.unsplash.com/photo-1572635196184-84e35138cf62?w=400&h=400&fit=crop&crop=center",
+        category: "Sunglasses",
+      },
+      {
+        id: 402,
+        badge: {
+          text: "Bestseller",
+          className: "bg-blue-500 text-white",
+        },
+        brand: "Warby Parker",
+        model: "Wilkie Eyeglasses",
+        price: "$95.00",
+        author: "by WP Official",
+        imageUrl:
+          "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=400&h=400&fit=crop&crop=center",
+        category: "Eyeglasses",
+      },
+      {
+        id: 403,
+        brand: "Oakley Holbrook",
+        model: "Polarized Sunglasses",
+        price: "$178.00",
+        author: "by Oakley",
+        imageUrl:
+          "https://images.unsplash.com/photo-1553942499-4b8f28c157fc?w=400&h=400&fit=crop&crop=center",
+        category: "Sunglasses",
+      },
+      {
+        id: 404,
+        badge: {
+          text: "Designer",
+          className: "bg-purple-500 text-white",
+        },
+        brand: "Gucci Cat Eye",
+        model: "Tortoiseshell Frame",
+        price: "$320.00",
+        author: "by Gucci",
+        imageUrl:
+          "https://images.unsplash.com/photo-1509695507497-903c140c43b0?w=400&h=400&fit=crop&crop=center",
+        category: "Sunglasses",
+      },
+      {
+        id: 405,
+        brand: "Tom Ford",
+        model: "Square Frame Glasses",
+        price: "$425.00",
+        author: "by Tom Ford",
+        imageUrl:
+          "https://images.unsplash.com/photo-1596900779725-91eff1ad02f8?w=400&h=400&fit=crop&crop=center",
+        category: "Eyeglasses",
+      },
+      {
+        id: 406,
+        badge: {
+          text: "Sport",
+          className: "bg-orange-500 text-white",
+        },
+        brand: "Costa Del Mar",
+        model: "Fantail PRO",
+        price: "$269.00",
+        author: "by Costa",
+        imageUrl:
+          "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&h=400&fit=crop&crop=center",
+        category: "Sunglasses",
+      },
+      {
+        id: 407,
+        brand: "Prada",
+        model: "Minimalist Eyeglasses",
+        price: "$350.00",
+        author: "by Prada",
+        imageUrl:
+          "https://images.unsplash.com/photo-1628723024085-7e5e3a78b9df?w=400&h=400&fit=crop&crop=center",
+        category: "Eyeglasses",
+      },
+      {
+        id: 408,
+        brand: "Ray-Ban Wayfarer",
+        model: "Classic Black Frame",
+        price: "$161.00",
+        author: "by Sunglass Hut",
+        imageUrl:
+          "https://images.unsplash.com/photo-1577803645773-f96470509666?w=400&h=400&fit=crop&crop=center",
+        category: "Sunglasses",
+      },
+      {
+        id: 409,
+        brand: "Persol",
+        model: "Folding Sunglasses",
+        price: "$260.00",
+        author: "by Persol Official",
+        imageUrl:
+          "https://images.unsplash.com/photo-1508296695146-257a814070b4?w=400&h=400&fit=crop&crop=center",
+        category: "Sunglasses",
+      },
+      {
+        id: 410,
+        badge: {
+          text: "Blue Light",
+          className: "bg-sky-500 text-white",
+        },
+        brand: "Zenni Optical",
+        model: "Browline Glasses",
+        price: "$29.95",
+        author: "by Zenni",
+        imageUrl:
+          "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=400&h=400&fit=crop&crop=center",
+        category: "Eyeglasses",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Cosmetic",
+    categories: ["All", "Lotion", "Mask", "Perfume"],
+    products: [
+      {
+        id: 501,
+        brand: "Fenty Beauty Foundation",
+        model: "Pro Filt'r Soft Matte",
+        price: "$39.00",
+        author: "by Sephora",
+        imageUrl:
+          "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop&crop=center",
+        category: "Mask",
+      },
+      {
+        id: 502,
+        badge: {
+          text: "New",
+          className: "bg-pink-500 text-white",
+        },
+        brand: "Dior Lip Glow Oil",
+        model: "Cherry Oil",
+        price: "$40.00",
+        author: "by Dior Cosmetics",
+        imageUrl:
+          "https://images.unsplash.com/photo-1631730486887-4d5348e42f75?w=400&h=400&fit=crop&crop=center",
+        category: "Perfume",
+      },
+      {
+        id: 503,
+        badge: {
+          text: "Bestseller",
+          className: "bg-green-500 text-white",
+        },
+        brand: "The Ordinary Serum",
+        model: "Niacinamide 10%",
+        price: "$6.50",
+        author: "by DECIEM",
+        imageUrl:
+          "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop&crop=center",
+        category: "Lotion",
+      },
+      {
+        id: 504,
+        brand: "Charlotte Tilbury",
+        model: "Magic Cream Moisturizer",
+        price: "$100.00",
+        author: "by CT Beauty",
+        imageUrl:
+          "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop&crop=center",
+        category: "Lotion",
+      },
+      {
+        id: 505,
+        badge: {
+          text: "Vegan",
+          className: "bg-green-600 text-white",
+        },
+        brand: "Rare Beauty Blush",
+        model: "Soft Pinch Liquid Blush",
+        price: "$23.00",
+        author: "by Rare Beauty",
+        imageUrl:
+          "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&h=400&fit=crop&crop=center",
+        category: "Mask",
+      },
+      {
+        id: 506,
+        brand: "Chanel No. 5",
+        model: "Eau de Parfum",
+        price: "$146.00",
+        author: "by Chanel",
+        imageUrl:
+          "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop&crop=center",
+        category: "Perfume",
+      },
+      {
+        id: 507,
+        badge: {
+          text: "Hydrating",
+          className: "bg-cyan-500 text-white",
+        },
+        brand: "Laneige Water Sleeping Mask",
+        model: "Overnight Face Mask",
+        price: "$29.00",
+        author: "by Laneige",
+        imageUrl:
+          "https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=400&h=400&fit=crop&crop=center",
+        category: "Mask",
+      },
+      {
+        id: 508,
+        brand: "Kiehl's Ultra Facial Cream",
+        model: "24-Hour Hydration",
+        price: "$32.00",
+        author: "by Kiehl's",
+        imageUrl:
+          "https://images.unsplash.com/photo-1631739133293-83c385b6141a?w=400&h=400&fit=crop&crop=center",
+        category: "Lotion",
+      },
+      {
+        id: 509,
+        brand: "Tom Ford Oud Wood",
+        model: "Eau de Parfum",
+        price: "$270.00",
+        author: "by Tom Ford",
+        imageUrl:
+          "https://images.unsplash.com/photo-1594035918239-f22a3e707e15?w=400&h=400&fit=crop&crop=center",
+        category: "Perfume",
+      },
+      {
+        id: 510,
+        badge: {
+          text: "Exfoliating",
+          className: "bg-indigo-500 text-white",
+        },
+        brand: "Drunk Elephant",
+        model: "T.L.C. Framboos Glycolic Night Serum",
+        price: "$90.00",
+        author: "by Drunk Elephant",
+        imageUrl:
+          "https://images.unsplash.com/photo-1556947992-29f1b0a8d6d6?w=400&h=400&fit=crop&crop=center",
+        category: "Lotion",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Food High Grade",
+    categories: [
+      "All",
+      "Drinks - Preparation",
+      "Cereals",
+      "Drink",
+      "Resources",
+    ],
+    products: [
+      {
+        id: 601,
+        badge: {
+          text: "Premium",
+          className: "bg-gold-500 text-white bg-yellow-600",
+        },
+        brand: "A5 Wagyu Steak",
+        model: "Japanese Ribeye",
+        price: "$150.00/lb",
+        author: "by Gourmet Meats",
+        imageUrl:
+          "https://images.unsplash.com/photo-1558030006-450675393462?w=400&h=400&fit=crop&crop=center",
+        category: "Resources",
+      },
+      {
+        id: 602,
+        badge: {
+          text: "Organic",
+          className: "bg-green-600 text-white",
+        },
+        brand: "Truffle Oil",
+        model: "Italian White Truffle",
+        price: "$29.99",
+        author: "by Fine Foods Co.",
+        imageUrl:
+          "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=400&fit=crop&crop=center",
+        category: "Resources",
+      },
+      {
+        id: 603,
+        brand: "Beluga Caviar",
+        model: "Imperial Grade",
+        price: "$200.00/oz",
+        author: "by Caviar House",
+        imageUrl:
+          "https://images.unsplash.com/photo-1608897013039-887f21d8c804?w=400&h=400&fit=crop&crop=center",
+        category: "Resources",
+      },
+      {
+        id: 604,
+        badge: {
+          text: "Rare",
+          className: "bg-purple-600 text-white",
+        },
+        brand: "Matsutake Mushrooms",
+        model: "Fresh Japanese",
+        price: "$80.00/lb",
+        author: "by Forest Delicacies",
+        imageUrl:
+          "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=400&fit=crop&crop=center",
+        category: "Resources",
+      },
+      {
+        id: 605,
+        brand: "Aged Balsamic Vinegar",
+        model: "25 Year Modena DOP",
+        price: "$125.00",
+        author: "by Italian Imports",
+        imageUrl:
+          "https://images.unsplash.com/photo-1506806732259-39c2d0268443?w=400&h=400&fit=crop&crop=center",
+        category: "Drink",
+      },
+      {
+        id: 606,
+        badge: {
+          text: "Single Origin",
+          className: "bg-yellow-800 text-white",
+        },
+        brand: "Kona Coffee Beans",
+        model: "Hawaiian Extra Fancy",
+        price: "$55.00/lb",
+        author: "by Aloha Coffee Co.",
+        imageUrl:
+          "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=400&h=400&fit=crop&crop=center",
+        category: "Drinks - Preparation",
+      },
+      {
+        id: 607,
+        brand: "Dom Pérignon",
+        model: "Vintage 2012 Champagne",
         price: "$250.00",
-        author: "by Formaggio Delights",
+        author: "by Moët & Chandon",
+        imageUrl:
+          "https://images.unsplash.com/photo-1510972527921-ce03766a1cf1?w=400&h=400&fit=crop&crop=center",
+        category: "Drink",
       },
       {
-        id: 4,
-        image:
-          "https://images.unsplash.com/photo-1597076231481-061a87a21591?w=500&auto=format&fit=crop",
-        badge: { text: "Limited", className: "bg-purple-500 text-white" },
-        title: "Wild Caught Beluga Caviar",
-        price: "$300.00",
-        author: "by The Caviar Co.",
+        id: 608,
+        badge: {
+          text: "Artisanal",
+          className: "bg-cyan-700 text-white",
+        },
+        brand: "Sourdough Bread",
+        model: "Organic Whole Wheat",
+        price: "$9.00/loaf",
+        author: "by The Local Loaf",
+        imageUrl:
+          "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400&h=400&fit=crop&crop=center",
+        category: "Cereals",
       },
       {
-        id: 5,
-        image:
-          "https://images.unsplash.com/photo-1551884831-bbf3cdc64343?w=500&auto=format&fit=crop",
-        badge: { text: "Single Origin", className: "bg-yellow-600 text-white" },
-        title: "Ethiopian Yirgacheffe Coffee Beans",
-        price: "$28.50",
-        author: "by The Daily Grind",
+        id: 609,
+        brand: "Iberico Ham",
+        model: "Pata Negra, Acorn-fed",
+        price: "$96.00/lb",
+        author: "by Spanish Delights",
+        imageUrl:
+          "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=400&fit=crop&crop=center",
+        category: "Resources",
       },
       {
-        id: 6,
-        image:
-          "https://images.unsplash.com/photo-1571572771031-4a638c12604b?w=500&auto=format&fit=crop",
-        badge: { text: "Artisanal", className: "bg-teal-500 text-white" },
-        title: "Manuka Honey UMF 20+",
-        price: "$65.00",
-        author: "by Nature's Nectar",
+        id: 610,
+        badge: {
+          text: "Matcha",
+          className: "bg-emerald-500 text-white",
+        },
+        brand: "Ceremonial Grade Matcha",
+        model: "Uji, Japan",
+        price: "$40.00",
+        author: "by Jade Leaf",
+        imageUrl:
+          "https://images.unsplash.com/photo-1581006910098-7048462c85f6?w=400&h=400&fit=crop&crop=center",
+        category: "Drinks - Preparation",
       },
     ],
   },

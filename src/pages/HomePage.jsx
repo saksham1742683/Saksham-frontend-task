@@ -3,7 +3,6 @@ import HeroSection from "../components/home/HeroSection";
 import ProductShowcase from "../components/home/ShopCategories";
 import PromoSection from "../components/home/ProductPromoCard";
 import WalletSaleBanner from "../components/home/WalletSaleBanner";
-import TechnologySection from "../components/home/TechnologySection";
 import FeaturesSection from "../components/home/FeaturesSection";
 import ProductSlider from "../components/home/ProductSlider";
 

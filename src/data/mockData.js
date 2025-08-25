@@ -1,6 +1,4 @@
-// src/data/mockData.js
 
-// --- Data for other components (preserved) ---
 export const categories = [
   { id: 1, name: "All Categories" },
   { id: 2, name: "Electronics" },
@@ -16,7 +14,7 @@ export const topNavLinks = [
   { id: 4, title: "Contact", url: "#" },
   { id: 5, title: "Frequently asked questions", url: "#" },
 ];
-// ... (other exports like mainNavLinks, products, heroCarouselSlides are also preserved)
+
 export const mainNavLinks = [
   { id: 1, title: "Home", url: "/" },
   { id: 2, title: "New Product", url: "/products" },
@@ -43,7 +41,6 @@ export const heroCarouselSlides = [
   },
 ];
 
-// --- NEW UNIFIED DATA SOURCE FOR ALL PRODUCT COMPONENTS ---
 export const productSections = [
   {
     id: 1,
